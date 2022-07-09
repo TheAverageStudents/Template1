@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Your Website</title>
+        <meta charset="UTF-8">
+        <meta name="title" content="Website">
+        <meta name="description" content="A website.">
+        <meta name="viewport" content="initial-scale=1, height=device-height, width=device-width">
+    </head>
+
+    <body>
+        <interface>
+            <section class="load">
+                <div id="loader">
+                    <div id="block"></div>
+                </div>
+
+                <!--You can try using a font to make your logo look good.-->
+
+                <div id="logo">
+                    <div>Your Logo</div>
+                </div>
+
+                <div class="no-js" hidden>
+                    Javascript is disabled in your browser, please enable it to use this site.
+                </div>
+            </section>
+
+            <div id="topbar" hidden>
+                <svg viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg" id="menuicon">
+                    <line x1="7.5" y1="0" x2="17.5" y2="10.25" stroke="white" stroke-width="1"/>
+                    <line x1="17.5" y1="9.75" x2="7.5" y2="20" stroke="white" stroke-width="1"/>
+                </svg>
+
+                <span class="logo1">Your Logo</span>
+
+                <span id="Accounts">
+                    <img id="AccountAvatar" src="../Resources/Account.png" />
+                    <span id="AccountName">Account</span>
+                </span>
+            </div>
+
+            <div id="OverlayContainer" hidden></div>
+            <div id="sidebarFrame" hidden>
+                <div id="sidebar">
+
+                    <item class="sidebarItem" id="homeButton">
+                        Home
+                    </item>
+                    <item class="sidebarItem" id="button2">
+                        Creations
+                    </item>
+
+                    <!--You can go on adding more items with class 'sidebarItem' here and they will become buttons-->
+                    <!--To make the buttons do something, you may need to give them IDs-->
+                    <!--After that you can simply use the 'click' event listener to do stuff-->
+                    <!--Use the menu wisely, it is not scrollable, if you make it, it looks messy.-->
+
+                </div>
+            </div>
+
+            <viewer hidden>
+                <div id="wrap"></div>
+            </viewer>
+
+            <OverlayViewer>
+                <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="closeOverlay" style="visibility: hidden;">
+                    <line x1="10" x2="30" y1="10" y2="30" stroke="white" stroke-width="2"/>
+                    <line x1="30" x2="10" y1="10" y2="30" stroke="white" stroke-width="2"/>
+                </svg>
+            </OverlayViewer>
+
+            <div id="OverlayContainer2" hidden></div>
+            <flyin hidden>
+                <div id="controlBar">
+                    <span id="flyTitle">
+                        FlyIn
+                    </span>
+                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" id="cross">
+                        <line x1="10" x2="30" y1="10" y2="30" stroke="white" stroke-width="2"/>
+                        <line x1="30" x2="10" y1="10" y2="30" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <div id="flyContent"></div>
+            </flyin>
+        </interface>
+    </body>
+
+    <div id="scripts">
+        <!--Only the loader style is loaded, so that the loading screen is quickly visible.-->
+        <!--The Javascript file will load the main css content needed.-->
+
+        <link rel="stylesheet" href="../Styles/loader.css">
+        <script src="../Javascript/home.js"></script>
+    </div>
+
+</html>

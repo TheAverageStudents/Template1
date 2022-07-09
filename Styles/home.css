@@ -1,0 +1,184 @@
+/*
+    Main Page
+*/}
+
+@keyframes showSidebar {from{margin-left: -25vw;}  to{margin-left: 1vw;}}
+
+@keyframes hideSidebar {from{margin-left: 1vw;} to{margin-left: -25vw;}}
+
+@keyframes fly {from{top: 110vh;} to{top: 15vh;}}
+
+@keyframes hide {from{top: 15vh;} to{top: 110vh;}}
+
+@keyframes disappear {
+    100%{opacity: 0; margin-top: 10vh;}
+}
+
+::-webkit-scrollbar{width: 1vw; opacity: 0;}
+::-webkit-scrollbar-track{opacity: 0; background: black; width: 1vw; border-radius: 0.5vw;}
+::-webkit-scrollbar-thumb{width: 1vw; border-radius: 0.5vw; background: #454545;}
+::-webkit-scrollbar-thumb:hover{background: aqua; width: 1.5vw; border-radius: 0.75vw;}
+::selection{background-color: yellowgreen;}
+
+viewer{width: 100vw;}
+
+viewer #wrap section{
+    display: block;
+    margin-top: 14vh; width: 100vw; height: 100vh;
+    font-family: Sunny; font-size: 3vh; z-index: 1;
+}
+
+/*Topbar*/
+
+#topbar{
+    position: fixed;
+    top: 0; left: 0; z-index: 3;
+    height: 10vh; width: 100vw;
+    background: rgba(35, 35, 35, 1);
+}
+
+#menuicon{
+    height: 5vh; width: 5vh; margin-left: 5vh;
+    background-color: #454545; opacity: 1; z-index: 10;
+    border-top-left-radius: 1vh; border-bottom-left-radius: 1vh;
+    border-top-right-radius: 1vh; border-bottom-right-radius: 1vh;
+}
+
+.logo1{
+    font-family: Tahoma; color: aqua; font-size: 8vh;
+    margin-left: 1vw; opacity: 1;
+}
+
+#Accounts{
+    position: fixed; right: 0; height: inherit; width: 40vw;
+    text-align: end;
+}
+
+#AccountAvatar{height: 8vh; width: 8vh; border-radius: 4vh; background-color: #5865F2;
+    margin-right: 1vw; margin-top: 1vh; display: inline-block;
+}
+#AccountName{font-family: Sunny; font-size: 5vh; margin-right: 1vw; margin-top: -1vh;
+    display: inline-block;
+}
+
+/*Sidebar*/
+
+#OverlayContainer{
+    margin-top: 10vh; height: 90vh; width: 100vw;
+    position: fixed; top: 0; left: 0; z-index: 4;
+}
+
+#sidebarFrame{
+    margin-left: -25vw;
+    height: 100vh; width: 21vw;
+    z-index: 4; position: fixed;
+    top: 0; left: 0;
+    padding-top: 15vh; padding-left: 1vw;
+}
+
+#sidebar{
+    height: 75vh; width: 20vw;
+    background-color: #232323; border-radius: 4vh;
+    padding-top: 5vh; z-index: 3;
+}
+
+#sidebar item{
+    display: block; font-family: Metal;
+    background-color: #454545;
+    height: 4vh; border-radius: 2vh;
+    text-align: center;
+    margin-bottom: 5vh; margin-left: 1vw; margin-right: 1vw;
+    padding-top: 2vh; z-index: 2;
+    cursor: pointer;
+}
+
+#sidebar item:hover{
+    background-color: #898989;
+}
+
+#button2{background-color: darkviolet !important;}
+
+/*Fly-In*/
+
+flyin{
+    position: fixed; left: 25vw; top: 110vh;
+    height: 70vh; width: 50vw; border-radius: 3vh;
+    background-color: #343434; z-index: 6;
+}
+
+#controlBar{
+    height: 6vh; width: 50vw; border-bottom: white 0.5vh solid;
+    border-top-right-radius: 3vh; border-top-left-radius: 3vh;
+    text-align: center;
+}
+
+#flyTitle{
+    width: 50vw; height: 5vh; font-size: 4vh;
+    font-family: Patrick;
+}
+
+#cross{
+    height: 4vh; width: 4vh; background-color: #454545;
+    border-radius: 2vh;
+    margin-top: 1vh; position: absolute; left: calc(50vw - 6vh);
+}
+
+#cross:hover{background-color: #898989; cursor: pointer;}
+
+#flyContent{margin-top: 4vh; height: 55vh; overflow-y: auto; 
+    font-family: Patrick; font-size: 2vw;
+}
+
+#OverlayContainer2{
+    height: 100vh; width: 100vw; background-color: black;
+    opacity: 0.75; position: fixed; top: 0; left: 0;
+}
+
+/*
+ *FLY-IN CONTENT STYLES
+ */
+
+#flyContent div{
+    text-align: center;
+    margin-left: 3vw; margin-right: 3vw;
+}
+
+#flyContent button{
+    height: 5vh; width: 10vw; border: none;
+    border-radius: 2.5vh; background-color: white;
+    font-size: 1.5vw; font-family: Patrick; cursor: pointer;
+}
+
+/**
+    *Overlay viewer
+*/
+
+OverlayViewer{
+    position: fixed; top: 10vh; left: 0; z-index: 3;
+    background-color: #343434; height: 90vh;
+}
+
+#closeOverlay{
+    position: fixed; top: 15vh; right: 3vw;
+    height: 2.5vw; width: 2.5vw; background-color: #343434;
+    border-radius: 1.25vw;
+}
+
+#closeOverlay:hover{background-color: #898989;}
+
+/*
+    *THE MAIN PAGE
+*/
+
+    /*Sections*/
+        /* Home */
+
+#sec{display: block;}
+
+
+    /*Dividers*/
+
+.SecDivider{
+    display:flex; align-items: center; justify-content: center;
+    height: 20vh; font-size: 8vh; text-align: center;
+}
